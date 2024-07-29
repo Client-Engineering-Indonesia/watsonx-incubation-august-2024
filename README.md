@@ -18,7 +18,8 @@ Let's start from the beginning, following Lab 0 sequentially to ensure a smooth 
 Below is the agenda for the watsonx Incubation Program 2024 in Indonesia:
 
 
-<img width="644" alt="image" src="https://github.com/user-attachments/assets/41f52565-2a4d-47bc-b278-519ebe7c93c5">
+<img width="1004" alt="image" src="https://github.com/user-attachments/assets/068ca225-88ef-4393-9a42-ed6e640ee870">
+
 
 
 
