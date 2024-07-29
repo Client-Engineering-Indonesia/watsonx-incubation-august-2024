@@ -8,10 +8,10 @@ This repository comprises multiple labs to facilitate your comprehension of util
 Let's start from the beginning, following Lab 0 sequentially to ensure a smooth understanding and progression through the subsequent labs:
 
 - [Lab 0 - Environment clinic](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%200%20-%20Environment%20clinic)
-- [Lab 1 - watsonx.ai playground (Prompt Lab) + Common Use Cases​][(https://github.com/Client-Engineering-Indonesia/watsonx-incubation-2024/tree/main/Lab%201%20-%20Using%20prompt%20lab%20for%20prompt%20engineering%E2%80%8B)](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%201%20-%20Using%20prompt%20lab%20for%20prompt%20engineering%E2%80%8B)
-- [Lab 2 - Building QnA with watsonx.ai and watsonx Discovery and watsonx.Assistant​][(https://github.com/Client-Engineering-Indonesia/watsonx-incubation-2024/tree/main/Lab%202%20-%20Common%20use%20cases%20for%20prompt%20Lab%E2%80%8B)](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%202%20-%20Building%20QnA%20with%20watsonx.ai%2C%20watsonx%20assistant%20and%20watson%20discovery)
-- [Lab 3 - Automating Dashboard Generation][(https://github.com/Client-Engineering-Indonesia/watsonx-incubation-2024/tree/main/Lab%203%20-%20Building%20QnA%20with%20watsonx.ai%2C%20watsonx%20assistant%20and%20watson%20discovery)](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%203%20-%20Automating%20Dashboard%20Generation)
-- [Lab 4 - Integrating watsonx with multiple channels (whatsapp, google maps, and voice call)]https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%204%20-%20Integrating%20watsonx%20with%20multiple%20channels
+- [Lab 1 - watsonx.ai playground (Prompt Lab) + Common Use Cases​](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%201%20-%20Using%20prompt%20lab%20for%20prompt%20engineering%E2%80%8B)
+- [Lab 2 - Building QnA with watsonx.ai and watsonx Discovery and watsonx.Assistant​](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%202%20-%20Building%20QnA%20with%20watsonx.ai%2C%20watsonx%20assistant%20and%20watson%20discovery)
+- [Lab 3 - Automating Dashboard Generation](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%203%20-%20Automating%20Dashboard%20Generation)
+- [Lab 4 - Integrating watsonx with multiple channels (whatsapp, google maps, and voice call)](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%204%20-%20Integrating%20watsonx%20with%20multiple%20channels)
 
 
 ## Two Days Agenda
