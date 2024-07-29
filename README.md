@@ -14,7 +14,7 @@ Let's start from the beginning, following Lab 0 sequentially to ensure a smooth 
 - [Lab 4 - Integrating watsonx with multiple channels (whatsapp, google maps, and voice call)](https://github.com/Client-Engineering-Indonesia/watsonx-incubation-august-2024/tree/main/Lab%204%20-%20Integrating%20watsonx%20with%20multiple%20channels)
 
 
-## Two Days Agenda
+## Agenda
 Below is the agenda for the watsonx Incubation Program 2024 in Indonesia:
 
 
