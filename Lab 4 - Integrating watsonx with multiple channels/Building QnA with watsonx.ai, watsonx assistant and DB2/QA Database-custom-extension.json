@@ -1,0 +1,294 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "description": "Minimal spec for commonly used features in watsonx.ai /generation API endpoint. Missing a few of parameters.",
+    "title": "Simplified watsonx.ai generation API",
+    "version": "1.1.0"
+  },
+  "servers": [
+    {
+      "url": "https://us-south.ml.cloud.ibm.com",
+      "description": "watsonx.ai v1-beta"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "x-apikey": {
+            "tokenUrl": "https://iam.cloud.ibm.com/identity/token",
+            "grantType": "urn:ibm:params:oauth:grant-type:apikey",
+            "secretKeys": ["apikey"],
+            "paramKeys": [],
+            "scopes": {}
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2": []
+    }
+  ],
+  "paths": {
+    "/ml/v1-beta/deployments/e3d4855d-9fb0-4d79-9280-b8a8bcca8631/generation/text": {
+      "post": {
+        "description": "Prompt-Provide engaging answer",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "query",
+            "description": "Release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is `2023-05-29`.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["parameters"],
+                "properties": {
+                  "parameters": {
+                    "type": "object",
+                    "properties": {
+                      "prompt_variables": {
+                        "type": "object",
+                        "properties": {
+                          "user_query": {
+                            "type": "string"
+                          },
+                          "answer": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "generated_text": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "string"
+                          },
+                          "generated_token_count": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "integer"
+                          },
+                          "input_token_count": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "integer"
+                          },
+                          "stop_reason": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/ml/v1-beta/deployments/a95bb86f-0e76-46ff-bcad-1b3a422584ca/generation/text": {
+      "post": {
+        "description": "Prompt-Convert Query to SQL Query",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "query",
+            "description": "Release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is `2023-05-29`.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["parameters"],
+                "properties": {
+                  "parameters": {
+                    "type": "object",
+                    "properties": {
+                      "prompt_variables": {
+                        "type": "object",
+                        "properties": {
+                          "user_question": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "generated_text": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "string"
+                          },
+                          "generated_token_count": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "integer"
+                          },
+                          "input_token_count": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "integer"
+                          },
+                          "stop_reason": {
+                            "description": "The ID of the model to be used for this request",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/ml/v4/deployments/5a72d039-04f8-436f-a7b6-9da4f8bbfbf1/predictions": {
+      "post": {
+        "description": "Function-Execute SQL Query",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "query",
+            "description": "Release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is `2023-05-29`.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["input_data"],
+                "properties": {
+                  "input_data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "fields": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "values": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "predictions": {
+                      "description": "The ID of the model to be used for this request",
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "fields": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "fields"
+                          },
+                          "values": {
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    }
+  }
+}

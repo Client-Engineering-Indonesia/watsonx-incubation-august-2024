@@ -1,0 +1,24 @@
+Generate an SQL query If we have table with this information 
+table: CMY49613.COMMODITY
+columns: STATE, DISTRICT, MARKET, COMMODITY, VARIETY, ARRIVAL_DATE, MIN_PRICE, MAX_PRICE, MODAL_PRICE
+Provide the query in JSON format.
+
+example:
+user question: what is the average modal price for banana
+JSON output: {"query": "SELECT AVG(MODAL_PRICE) as AVG_MODAL_PRICE FROM CMY49613.COMMODITY WHERE COMMODITY = 'Banana'"}
+
+user question: what is the average modal price for all commodities
+JSON output: 
+{"query": "SELECT AVG(MODAL_PRICE) as AVG_MODAL_PRICE FROM CMY49613.COMMODITY"}
+
+user question: what is the maximum price for potato in Gujarat
+JSON output: 
+{"query": "SELECT MAX(MAX_PRICE) as MAX_PRICE FROM CMY49613.COMMODITY WHERE STATE = 'Gujarat' AND COMMODITY = 'Potato'"}
+
+user question:  which comodity is the most expensive?
+JSON ouput: 
+{"query": "SELECT COMMODITY, MAX(MAX_PRICE) as MAX_PRICE FROM CMY49613.COMMODITY GROUP BY COMMODITY ORDER BY MAX_PRICE DESC LIMIT 1"}
+
+user question: {user_question}
+JSON output:
+

@@ -1,0 +1,40 @@
+{
+    "NOTA BEVERAGES COMPANY": {
+      "Tanggal": "2 Juli, 2024",
+      "Nomor invoice": "128/07/2024",
+      "Kepada": {
+        "Nama": "Perusahaan ABC",
+        "Email": "company@abc.com"
+      },
+      "Produk": [
+        {
+          "Nama": "Indomie kuah kari ayam",
+          "Harga": 118000,
+          "Jumlah": "3 carton"
+        },
+        {
+          "Nama": "Pop mie rasa bakso",
+          "Harga": 6500,
+          "Jumlah": 10
+        },
+        {
+          "Nama": "Sarimi isi 2 soto",
+          "Harga": 90160,
+          "Jumlah": 3
+        },
+        {
+          "Nama": "Mie telur cap 3 ayam",
+          "Harga": 290000,
+          "Jumlah": 1
+        }
+      ],
+      "Total": {
+        "Total Harga": 979480
+      },
+      "Pembayaran": {
+        "Nama": "PTABC",
+        "Nomor Rekening": "1123344000"
+      }
+    }
+  }
+  

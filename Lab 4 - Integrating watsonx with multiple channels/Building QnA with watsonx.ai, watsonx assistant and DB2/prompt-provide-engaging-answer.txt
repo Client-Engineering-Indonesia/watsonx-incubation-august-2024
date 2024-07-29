@@ -1,0 +1,7 @@
+user question: {user_query}
+query result: {answer}
+
+Generate the answer in engaging style, if the user question and query result is given above. 
+create output in JSON format with this structure {answer:}
+
+Json output:
