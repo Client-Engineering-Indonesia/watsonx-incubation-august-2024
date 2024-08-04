@@ -6,34 +6,35 @@ Here are the available users. Password will be given when incubation start.
 2. Enter the username and password as per your respective company.
 3. Select region **Dallas (us-south)**
 
-BSI
-- Dita.Rananta+wxjuly24_BSI_1@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_BSI_2@mail.test.ibm.com
+Kemlu
+- lourensius.bisma+wxincaug24_kemlu@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_kemlu2@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_kemlu3@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_kemlu4@mail.test.ibm.com
   
-Telkom
-- Dita.Rananta+wxjuly24_Telkom_1@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Telkom_2@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Telkom_3@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Telkom_4@mail.test.ibm.com
+Maybank
+- lourensius.bisma+wxincaug24_maybank1@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_maybank2@mail.test.ibm.com
 
-BNI
-- Dita.Rananta+wxjuly24_BNI_1@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_BNI_2@mail.test.ibm.com
+JAS
+- lourensius.bisma+wxincaug24_jas1@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_jas2@mail.test.ibm.com
 
-Mandiri
-- Dita.Rananta+wxjuly24_Mandiri_1@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Mandiri_2@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Mandiri_3@mail.test.ibm.com
+Nestle
+- lourensius.bisma+wxincaug24_nestle1@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_nestle2@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_nestle3@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_nestle4@mail.test.ibm.com
 
-Pegadaian
-- Dita.Rananta+wxjuly24_Pegadaian_1@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Pegadaian_2@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Pegadaian_3@mail.test.ibm.com
+BTPN
+- lourensius.bisma+wxincaug24_btpn1@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_btpn2@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_btpn3@mail.test.ibm.com
 
-Danamon
-- Dita.Rananta+wxjuly24_Danamon_1@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Danamon_2@mail.test.ibm.com
-- Dita.Rananta+wxjuly24_Danamon_3@mail.test.ibm.com
+Business Patner (Metrodata & Inoventi)
+- lourensius.bisma+wxincaug24_metro1@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_metro2@mail.test.ibm.com
+- lourensius.bisma+wxincaug24_invt1@mail.test.ibm.com
 
 
 Prerequisite Actions can be found here: 
