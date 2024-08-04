@@ -1,12 +1,12 @@
 {
-  "name": "Assistant-action",
+  "name": "maps-action",
   "type": "action",
   "valid": true,
   "status": "Available",
-  "created": "2024-05-07T03:28:01.454Z",
-  "updated": "2024-05-09T18:05:47.108Z",
+  "created": "2024-07-22T08:00:44.695Z",
+  "updated": "2024-08-04T15:25:44.309Z",
   "language": "en",
-  "skill_id": "d72a07ad-658c-41df-9acb-7509c7299b24",
+  "skill_id": "1bfae70e-af69-44cb-afa0-63a98a026750",
   "workspace": {
     "actions": [
       {
@@ -22,8 +22,9 @@
                 "type": "integration_interaction",
                 "method": "POST",
                 "internal": {
-                  "spec_hash_id": "8566081a305e8f8ade4e9bd3887da0600e87948417fc10ba38ee121426f8c50b",
-                  "catalog_item_id": "92fd7066-da08-4b60-b7a6-dc27e098c329"
+                  "spec_hash_id": "8839e74834d1df3e58d9899f17298627c23c528c6bedb09f4532c40de3d7883c",
+                  "match_scenario": 12,
+                  "catalog_item_id": "f1aec2dc-149b-4c2a-a633-e158fae7359d"
                 },
                 "request_mapping": {
                   "body": [
@@ -288,7 +289,7 @@
               "generic": [
                 {
                   "title": "Map",
-                  "source": "https://www.google.com/maps/embed/v1/directions?key=AIzaSyDcZaT6GlGLKVBVW4AfSXQZY_X6efpCNrA&origin=${User_Latitude},${User_Longitude}&destination=${destination_string}",
+                  "source": "https://www.google.com/maps/embed/v1/directions?key=AIzaSyBQ22ruiQc8z8siUpOzcb4fDtvakV9aZnE&origin=${User_Latitude},${User_Longitude}&destination=${destination_string}",
                   "response_type": "iframe",
                   "channel_options": {
                     "chat": {
@@ -434,8 +435,9 @@
                 "type": "integration_interaction",
                 "method": "POST",
                 "internal": {
-                  "spec_hash_id": "cc50493e455de183d661b95360196ddb468a02051add6dcaf4a6479b34900be5",
-                  "catalog_item_id": "702777cc-fbc9-49ed-8182-aa888752f2f7"
+                  "spec_hash_id": "7f636a6f703d199388a4129b8b462c7edcd7e0434c504d7d62ef9007c42a6e22",
+                  "match_scenario": 12,
+                  "catalog_item_id": "53ece435-ff97-402c-9b55-d3c32fc869c0"
                 },
                 "request_mapping": {
                   "body": [
@@ -761,8 +763,9 @@
                 "type": "integration_interaction",
                 "method": "POST",
                 "internal": {
-                  "spec_hash_id": "cc50493e455de183d661b95360196ddb468a02051add6dcaf4a6479b34900be5",
-                  "catalog_item_id": "702777cc-fbc9-49ed-8182-aa888752f2f7"
+                  "spec_hash_id": "7f636a6f703d199388a4129b8b462c7edcd7e0434c504d7d62ef9007c42a6e22",
+                  "match_scenario": 12,
+                  "catalog_item_id": "53ece435-ff97-402c-9b55-d3c32fc869c0"
                 },
                 "request_mapping": {
                   "body": [
@@ -1469,7 +1472,7 @@
         "data_type": "string",
         "description": "",
         "initial_value": {
-          "scalar": "f275effb-56dc-47d2-8da9-5dc9bd832a82"
+          "scalar": "0b228320-5714-4227-b1fc-d0a4a98d4487"
         }
       },
       {
@@ -1660,9 +1663,84 @@
     "collections": [],
     "counterexamples": [],
     "system_settings": {
+      "nlp": {
+        "model": "latest"
+      },
+      "variable": {
+        "format": {
+          "time": {
+            "pattern": "short"
+          },
+          "currency": {
+            "fraction_digits": 2
+          }
+        }
+      },
+      "launch_mode": {
+        "default": "learning",
+        "enabled": false,
+        "learning": {
+          "step_retry_threshold": 2,
+          "use_connect_to_support": "more_often",
+          "single_answer_clarification": "more_often",
+          "disambiguation_clarification": "more_often"
+        },
+        "confident": {
+          "step_retry_threshold": 4,
+          "use_connect_to_support": "sometimes",
+          "single_answer_clarification": "sometimes",
+          "disambiguation_clarification": "sometimes"
+        }
+      },
       "topic_switch": {
         "enabled": true,
-        "messages": {}
+        "messages": {
+          "confirmation_failure": {
+            "generic": [
+              {
+                "values": [
+                  {
+                    "text_expression": {
+                      "concat": [
+                        {
+                          "scalar": "Please reply back with yes or no"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "response_type": "text",
+                "selection_policy": "sequential"
+              }
+            ]
+          },
+          "confirmation_request": {
+            "generic": [
+              {
+                "values": [
+                  {
+                    "text_expression": {
+                      "concat": [
+                        {
+                          "scalar": "Do you want to return to your previous topic "
+                        },
+                        {
+                          "system_variable": "digressed_from"
+                        },
+                        {
+                          "scalar": "?"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "response_type": "text",
+                "selection_policy": "sequential"
+              }
+            ]
+          }
+        },
+        "max_tries": 3
       },
       "disambiguation": {
         "prompt": "Did you mean:",
@@ -1680,9 +1758,9 @@
     "learning_opt_out": true
   },
   "description": "created for assistant 22bac53a-215f-44d7-a0f0-fcc790efd83a",
-  "assistant_id": "edb5da66-1652-4b29-9e29-4b940bc9be76",
-  "workspace_id": "d72a07ad-658c-41df-9acb-7509c7299b24",
+  "assistant_id": "4e8a9b80-4829-4414-9589-e190416f2ae3",
+  "workspace_id": "1bfae70e-af69-44cb-afa0-63a98a026750",
   "dialog_settings": {},
   "next_snapshot_version": "1",
-  "environment_id": "8686c0c8-5393-4e53-b285-dee637e0b975"
+  "environment_id": "89f3a994-1f05-400b-9cfe-bd0590bee484"
 }
