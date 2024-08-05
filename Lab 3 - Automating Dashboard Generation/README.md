@@ -5,7 +5,7 @@ Front-end juga menggukan open source HTML web component yang dibuat oleh IBM, di
 Aplikasi ini memungkinkan Anda melakukan tanya jawab menggunakan data yang ada di-database dengan bantuan LLM Model. Hal yang biasanya Anda tanyakan ke data analyst, sekarang dapat Anda tanyakan secara mandiri ke app ini. Metode yang digunakan untuk melakukannya dinamakan [Text to SQL](https://research.ibm.com/blog/granite-LLM-text-to-SQL). Dimana pertanyaan dari pengguna diubah menjadi SQL query oleh LLM Model dan SQL query ini akan digunakan untuk mendapatkan data dari DB. Setelah data didapatkan, LLM pula yang akan menjawab pertanyaan Anda menjadi jawaban yang mudah dipahami.
 
 
-Coba secara langsung applikasi yang sudah di deploy [disini](https://ibm-jaya.1hjzei9v1c28.us-south.codeengine.appdomain.cloud/)
+Coba secara langsung applikasi yang sudah di deploy [disini](https://ibmjaya.1jk7wywevfmh.us-south.codeengine.appdomain.cloud/)
 
 ## How this app works? 🚀
 Aplikasi ini memungkinkan pengguna melakukan tanya jawab dengan LLM seputar data penjualan yang ada di database. Berikut adalah kapabilitas dari aplikasi ini: 
