@@ -42,6 +42,7 @@ db2_connection = db2_init()
 
 def query_db2_df(query, db2_connection = db2_connection):    
     answer_df = pd.read_sql_query(query, con=db2_connection)
+    db2_connection.close()
     return answer_df
 
 #=============================Get from main table==============================
