@@ -17,11 +17,23 @@ Let's start from the beginning, following Lab 0 sequentially to ensure a smooth 
 ## Agenda
 Below is the agenda for the watsonx Incubation Program 2024 in Indonesia:
 
+| No  | Time           | Duration   | Topic                                                                 |
+|-----|----------------|------------|-----------------------------------------------------------------------|
+| 1   | 08:30 - 09:30  | 1h         | Lab 0 - Environment Check (Connect to wifi & IBM cloud)               |
+| 2   | 09:30 - 10:00  | 30 mins    | Intro to Gen AI + Top Use Cases                                       |
+| 3   | 10:00 - 10:15  | 15 mins    | Break                                                                 |
+| 4   | 10:15 - 10:25  | 10 mins    | Intro to watsonx Discovery + watsonx Assistant                        |
+| 5   | 10:25 - 11:20  | 55 mins    | Lab 2 - Building QnA with watsonx.ai + watsonx Discovery + watsonx Assistant |
+| 6   | 11:20 - 12:05  | 45 mins    | Lab 1 - watsonx.ai playground (Prompt Lab) + Common Use Cases         |
+| 7   | 12:05 - 13:05  | 1h         | Lunch                                                                 |
+| 8   | 13:05 - 13:45  | 40 mins    | Lab 3 - Automating dashboard generation                               |
+| 9   | 13:45 - 14:45  | 1h         | Lab 4 - Integrating watsonx with multiple channels (whatsapp, google maps, voice call) |
+| 10  | 14:45 - 15:00  | 15 mins    | Break                                                                 |
+| 11  | 15:00 - 15:40  | 40 mins    | Intro to watsonx data + watsonx governance + watsonx orchestrate + watsonx code assistant for Z |
+| 12  | 15:40 - 16:30  | 50 mins    | Use case discussion (break out)                                       |
 
-<img width="1314" alt="image" src="https://github.com/user-attachments/assets/19f24efe-6dd4-4aad-a660-2acf78345c2a">
 
-
-
+Agenda per 25/08/2024
 
 We encourage all participants to actively engage in the program, ask questions, and seek assistance if needed. Stay tuned for updates and announcements regarding the schedule or any additional resources that may enhance your learning experience. We're excited about your participation and the opportunity to explore the potential of watsonx technologies together!
 
