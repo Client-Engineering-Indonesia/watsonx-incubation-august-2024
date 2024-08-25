@@ -18,6 +18,8 @@ DB2_HOST = os.environ["DB2_HOST"]
 DB2_PORT = os.environ["DB2_PORT"]
 DB2_USERNAME = os.environ["DB2_USERNAME"]
 DB2_PASSWORD = os.environ["DB2_PASSWORD"]
+DB2_SCHEMA = os.environ["DB2_SCHEMA"]
+DB2_TABLE = os.environ["DB2_TABLE"]
 
 
 creds = {
@@ -40,13 +42,14 @@ def db2_init(DB2_HOST=DB2_HOST, DB2_PORT=DB2_PORT, DB2_USERNAME=DB2_USERNAME, DB
 
 db2_connection = db2_init()
 
-def query_db2_df(query, db2_connection = db2_connection):    
+def query_db2_df(query):    
+    db2_connection = db2_init()
     answer_df = pd.read_sql_query(query, con=db2_connection)
     db2_connection.close()
     return answer_df
 
 #=============================Get from main table==============================
-table_name = "SCHEMA.SALESMAIN"
+table_name = f"{DB2_SCHEMA}.{DB2_TABLE}"
 query_init = f"SELECT * FROM {table_name}"
 answer_df = query_db2_df(query_init)
 header = list(answer_df.columns)
@@ -174,28 +177,28 @@ def question_to_sql(user_question, table_name=table_name,header=header):
         Contoh pertanyaan dan kueri SQL:
 
         Pertanyaan: Tampilkan top 5 salesman dengan total penjualan tertinggi
-        Jawaban: {{"query": "SELECT SALESMANNAME, SALESMANCITY, SUM(NETSALESAMOUNT) AS TotalSalesAmount FROM SCHEMA.SALESMAIN GROUP BY SALESMANNAME, SALESMANCITY ORDER BY TotalSalesAmount DESC LIMIT 5;"}}
+        Jawaban: {{"query": "SELECT SALESMANNAME, SALESMANCITY, SUM(NETSALESAMOUNT) AS TotalSalesAmount FROM {table_name} GROUP BY SALESMANNAME, SALESMANCITY ORDER BY TotalSalesAmount DESC LIMIT 5;"}}
 
         Pertanyaan: Tampilkan customer yang berada di kota Bogor
-        Jawaban: {{"query": "SELECT DISTINCT CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERGROUP, CUSTOMERADDRESS, CUSTOMERCOUNTRY, CUSTOMERTYPE FROM SCHEMA.SALESMAIN WHERE UPPER(CUSTOMERCITY) = UPPER('Bogor');"}}
+        Jawaban: {{"query": "SELECT DISTINCT CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERGROUP, CUSTOMERADDRESS, CUSTOMERCOUNTRY, CUSTOMERTYPE FROM {table_name} WHERE UPPER(CUSTOMERCITY) = UPPER('Bogor');"}}
 
         Pertanyaan: Perusahaan ABC ada di kota apa saja?
-        Jawaban: {{"query": "SELECT DISTINCT COMPANYNAME, CITY FROM SCHEMA.SALESMAIN WHERE COMPANYNAME = 'PT. ABC';"}}
+        Jawaban: {{"query": "SELECT DISTINCT COMPANYNAME, CITY FROM {table_name} WHERE COMPANYNAME = 'PT. ABC';"}}
 
         Pertanyaan: Tampilkan top 5 produk dengan total penjualan terbanyak
-        Jawaban: {{"query": "SELECT PRODUCTID, SHORTNAME, SUM(NETSALESQUANTITY) AS TotalSalesQuantity FROM SCHEMA.SALESMAIN GROUP BY PRODUCTID, SHORTNAME ORDER BY TotalSalesQuantity DESC LIMIT 5;"}}
+        Jawaban: {{"query": "SELECT PRODUCTID, SHORTNAME, SUM(NETSALESQUANTITY) AS TotalSalesQuantity FROM {table_name} GROUP BY PRODUCTID, SHORTNAME ORDER BY TotalSalesQuantity DESC LIMIT 5;"}}
         
         Pertanyaan:"Kapan paling lambat customer toko ismail bayar invoicenya?"
-        Jawaban: {{"query": "SELECT MAX(DUEDATE) AS LatestDueDate FROM SCHEMA.SALESMAIN WHERE LOWER(CUSTOMERNAME) LIKE LOWER('%TOKO ismail%');"}}
+        Jawaban: {{"query": "SELECT MAX(DUEDATE) AS LatestDueDate FROM {table_name} WHERE LOWER(CUSTOMERNAME) LIKE LOWER('%TOKO ismail%');"}}
 
         Pertanyaan: Berapa yang harus dibayar oleh customer dua sultan dan berapa yang tersisa?
-        Jawaban: {{"query": "SELECT SUM(LASTAMOUNT) AS TotalAmountToPay, SUM(LASTAMOUNT - PAYMENTAMOUNT) AS RemainingAmount FROM SCHEMA.SALESMAIN WHERE LOWER(CUSTOMERNAME) LIKE LOWER('%dua sultan%');"}}
+        Jawaban: {{"query": "SELECT SUM(LASTAMOUNT) AS TotalAmountToPay, SUM(LASTAMOUNT - PAYMENTAMOUNT) AS RemainingAmount FROM {table_name} WHERE LOWER(CUSTOMERNAME) LIKE LOWER('%dua sultan%');"}}
         
         Pertanyaan: Siapa saja yang disupervisi oleh Jupri?
-        Jawaban: {{"query": "SELECT DISTINCT SALESMANNAME FROM SCHEMA.SALESMAIN WHERE LOWER(SUPERVISORNAME) LIKE LOWER('%Jupri%');"}}
+        Jawaban: {{"query": "SELECT DISTINCT SALESMANNAME FROM {table_name} WHERE LOWER(SUPERVISORNAME) LIKE LOWER('%Jupri%');"}}
         
         Pertanyaan: Tampilkan salesman di Surabaya?
-        Jawaban: {{"query": "SELECT DISTINCT SALESMANNAME, SALESMANCITY, SALESMANPHONE, SALESMANSTATUS FROM SCHEMA.SALESMAIN WHERE LOWER(SALESMANCITY) = LOWER('Surabaya');"}}
+        Jawaban: {{"query": "SELECT DISTINCT SALESMANNAME, SALESMANCITY, SALESMANPHONE, SALESMANSTATUS FROM {table_name} WHERE LOWER(SALESMANCITY) = LOWER('Surabaya');"}}
                 
         Pertanyaan: {user_question}
         Jawaban:
@@ -250,7 +253,7 @@ def query_wxai(user_question, data, streaming=False):
         return {'answer': "Maaf, informasi yang anda butuhkan tidak tersedia di database, silahkan coba dengan pertanyaan lain! Terima kasih."}
     else:
         prompt = f"""
-            Anda adalah customer service dari perusahaan Penjualan yang bertugas untuk menjawab semua pertanyaan terkait data Sales, data Piutang, dan data Pembayaran.
+            Anda adalah customer service dari perusahaan IBM yang bertugas untuk menjawab semua pertanyaan terkait data Sales, data Piutang, dan data Pembayaran.
             Tugas Anda adalah untuk memberikan jawaban yang baik, ramah, dan menarik berdasarkan pertanyaan user_question dan hasil query_result yang diberikan.
 
             user_question: {user_question}
